@@ -125,6 +125,25 @@ Good and bad patterns for each audit category.
 <div aria-hidden="true">
   <button>This button is invisible but focusable!</button>
 </div>
+
+// GOOD - Accessible modal dialog
+<dialog
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="modal-title"
+  aria-describedby="modal-desc"
+>
+  <h2 id="modal-title">Confirm deletion</h2>
+  <p id="modal-desc">This action cannot be undone.</p>
+  <button onClick={onConfirm}>Confirm</button>
+  <button onClick={onCancel} autoFocus>Cancel</button>
+</dialog>
+
+// BAD - Modal without ARIA attributes or focus management
+<div className="modal">
+  <h2>Confirm</h2>
+  <button onClick={onConfirm}>OK</button>
+</div>
 ```
 
 ## 7. Structure & Semantics

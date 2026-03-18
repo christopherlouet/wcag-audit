@@ -21,6 +21,7 @@ Regex patterns for finding common WCAG violations via static code analysis.
 ## ARIA
 
 ```
+# Valid roles list based on WAI-ARIA 1.2 spec — update if new roles are added to the spec
 role="(?!alert|alertdialog|button|checkbox|combobox|dialog|grid|gridcell|img|link|list|listbox|listitem|log|marquee|math|menu|menubar|menuitem|menuitemcheckbox|menuitemradio|navigation|none|note|option|presentation|progressbar|radio|radiogroup|region|row|rowgroup|rowheader|search|separator|slider|spinbutton|status|switch|tab|tablist|tabpanel|textbox|timer|toolbar|tooltip|tree|treegrid|treeitem)[a-z]+"
 aria-hidden=["']true["'][^>]*tabindex=(?!["']-1)
 aria-hidden=["']true["'][^>]*<button
@@ -78,6 +79,15 @@ autoplay(?![^>]*muted)
 <a[^>]*>click here</a>
 <a[^>]*>here</a>
 <a[^>]*>read more</a>
+# Note: link text patterns are English-only — adapt for multilingual projects
+```
+
+## WCAG 2.2 (target size, focus not obscured)
+
+```
+# Not detectable via static regex analysis — see CHECKLIST.md for manual review items
+# Target size: visually inspect that interactive elements are at least 44x44px
+# Focus not obscured: verify focused elements are not hidden behind sticky/fixed headers
 ```
 
 ## Color (flags for manual review)

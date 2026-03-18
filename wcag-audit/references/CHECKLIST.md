@@ -48,6 +48,13 @@ Items that cannot be fully verified by static code analysis and require manual i
 - [ ] Landmark regions cover all page content
 - [ ] Navigation is consistent across pages
 
+## Tables
+
+- [ ] Complex data tables have correctly associated headers (`headers` attribute or `scope`)
+- [ ] Layout tables use `role="presentation"` and have no `<th>`, `<caption>`, or `summary`
+- [ ] Table captions accurately describe the table content
+- [ ] Data relationships are understandable when read linearly by a screen reader
+
 ## Interactive Components
 
 - [ ] Carousels/sliders can be paused and navigated via keyboard

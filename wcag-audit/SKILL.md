@@ -24,7 +24,7 @@ Use this skill whenever:
 
 ## Workflow
 
-1. Scan UI files (components, pages, layouts, CSS/SCSS)
+1. Scan UI files matching `*.tsx`, `*.jsx`, `*.html`, `*.vue`, `*.svelte`, `*.css`, `*.scss` (components, pages, layouts)
 2. Audit all 11 categories systematically
 3. Classify each issue by impact level (Critical/Serious/Moderate/Minor)
 4. Distinguish violations (auto-detectable) from needs-review (manual check required)
