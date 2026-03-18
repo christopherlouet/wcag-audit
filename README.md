@@ -2,7 +2,7 @@
 
 ![Version](https://img.shields.io/badge/version-1.1-blue) ![WCAG](https://img.shields.io/badge/WCAG-2.1%2F2.2%20AA-green) ![License](https://img.shields.io/badge/license-MIT-brightgreen)
 
-An [Agent Skill](https://agentskills.io) for auditing web accessibility against WCAG 2.1/2.2 level AA, inspired by [axe-core](https://github.com/dequelabs/axe-core) (93+ rules).
+An [Agent Skill](https://agentskills.io) for auditing web accessibility against WCAG 2.1/2.2 level AA. 64 rules across 11 categories, inspired by [axe-core](https://github.com/dequelabs/axe-core).
 
 ## Install
 
