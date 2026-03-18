@@ -57,7 +57,7 @@ The audit produces:
 wcag-audit/
 ├── SKILL.md                   # Main skill instructions
 └── references/
-    ├── RULES.md               # 60+ rules across 11 categories
+    ├── RULES.md               # 64 rules across 11 categories
     ├── PATTERNS.md            # Regex patterns for violation detection
     ├── EXAMPLES.md            # Good/bad code examples per category
     └── CHECKLIST.md           # Manual review checklist (needs-review items)

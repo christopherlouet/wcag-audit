@@ -6,7 +6,6 @@ compatibility: Works with any web project (HTML, React, Vue, Angular, Svelte). R
 metadata:
   author: christopherlouet
   version: "1.1"
-  source: https://github.com/christopherlouet/wcag-audit
 ---
 
 # WCAG Accessibility Audit

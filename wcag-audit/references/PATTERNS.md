@@ -26,8 +26,7 @@ Regex patterns for finding common WCAG violations via static code analysis.
 # Valid roles list based on WAI-ARIA 1.2 spec — update if new roles are added to the spec
 role="(?!alert|alertdialog|button|checkbox|combobox|dialog|grid|gridcell|img|link|list|listbox|listitem|log|marquee|math|menu|menubar|menuitem|menuitemcheckbox|menuitemradio|navigation|none|note|option|presentation|progressbar|radio|radiogroup|region|row|rowgroup|rowheader|search|separator|slider|spinbutton|status|switch|tab|tablist|tabpanel|textbox|timer|toolbar|tooltip|tree|treegrid|treeitem)[a-z]+"
 aria-hidden=["']true["'][^>]*tabindex=(?!["']-1)
-aria-hidden=["']true["'][^>]*<button
-aria-hidden=["']true["'][^>]*<a\s
+# Note: detecting aria-hidden with focusable children (button, a) requires DOM analysis, not regex
 ```
 
 ## Structure

@@ -1,6 +1,6 @@
 # WCAG Audit Rules Reference
 
-63 rules organized by category, with impact levels and WCAG criteria references. Inspired by axe-core (93+ rules).
+64 rules organized by category, with impact levels and WCAG criteria references. Inspired by axe-core (93+ rules).
 
 ## 1. Images & Media
 
