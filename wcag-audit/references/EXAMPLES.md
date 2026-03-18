@@ -149,6 +149,16 @@ Good and bad patterns for each audit category.
 ## 7. Structure & Semantics
 
 ```tsx
+// GOOD - HTML with lang and descriptive title
+<html lang="en">
+  <head><title>Dashboard - MyApp</title></head>
+</html>
+
+// BAD - Missing lang, empty title
+<html>
+  <head><title></title></head>
+</html>
+
 // GOOD - Landmarks with unique labels
 <header>
   <nav aria-label="Main navigation">{/* ... */}</nav>

@@ -101,16 +101,13 @@ For a complete runtime audit, use in addition:
 
 ## Directives
 
-**CRITICAL**: Audit all 11 categories systematically — never skip a category.
-
-**CRITICAL**: Every issue must be classified by impact level (Critical/Serious/Moderate/Minor).
-
-**CRITICAL**: Distinguish violations (auto-detectable) from needs-review (manual verification). Load [references/CHECKLIST.md](references/CHECKLIST.md) for manual review items.
-
-**CRITICAL**: Propose concrete fixes with code examples for every violation. Load [references/EXAMPLES.md](references/EXAMPLES.md) for good/bad patterns.
+**CRITICAL**: Always distinguish violations (auto-detectable) from needs-review (manual verification). Load [references/CHECKLIST.md](references/CHECKLIST.md) for manual review items.
 
 **CRITICAL**: Never ignore Critical violations — they block access for users with disabilities.
 
+- Audit all 11 categories systematically — never skip a category
+- Classify every issue by impact level (Critical/Serious/Moderate/Minor)
+- Propose concrete fixes with code examples for every violation. Load [references/EXAMPLES.md](references/EXAMPLES.md) for good/bad patterns
 - Never ignore decorative images (they must have `alt=""`)
 - Target WCAG 2.1/2.2 level AA minimum
 - Use [references/PATTERNS.md](references/PATTERNS.md) regex patterns for systematic detection

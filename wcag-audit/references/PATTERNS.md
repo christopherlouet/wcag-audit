@@ -14,8 +14,10 @@ Regex patterns for finding common WCAG violations via static code analysis.
 ## Forms
 
 ```
-<input(?![^>]*aria-label)(?![^>]*id=.*<label[^>]*for=)
-<select(?![^>]*aria-label)(?![^>]*id=)
+# Inputs without any labeling mechanism (id, aria-label, aria-labelledby)
+# Note: verifying that a matching <label for="id"> exists requires multi-line analysis
+<input(?![^>]*aria-label)(?![^>]*aria-labelledby)(?![^>]*id=)
+<select(?![^>]*aria-label)(?![^>]*aria-labelledby)(?![^>]*id=)
 ```
 
 ## ARIA
