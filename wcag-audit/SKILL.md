@@ -5,13 +5,22 @@ license: MIT
 compatibility: Works with any web project (HTML, React, Vue, Angular, Svelte). Read-only audit — no modifications.
 metadata:
   author: christopherlouet
-  version: "1.0"
+  version: "1.1"
   source: https://github.com/christopherlouet/wcag-audit
 ---
 
 # WCAG Accessibility Audit
 
 Perform a comprehensive accessibility audit of UI code based on WCAG 2.1/2.2 level AA, inspired by the axe-core rule set (93+ rules).
+
+## When to use this skill
+
+Use this skill whenever:
+- The user asks to check, audit, or review accessibility
+- UI components or pages are created or modified
+- Code is being reviewed before deployment or release
+- The user mentions WCAG, a11y, screen readers, assistive technology, or accessibility compliance
+- A form, modal, table, navigation, or interactive component is being built
 
 ## Workflow
 
@@ -47,53 +56,13 @@ Perform a comprehensive accessibility audit of UI code based on WCAG 2.1/2.2 lev
 | 11 | WCAG 2.2 | target size 44x44px, focus not obscured | 2.5.8, 2.4.11 |
 
 For detailed rules per category, see [references/RULES.md](references/RULES.md).
-
-## Detection Patterns
-
-Use these regex patterns to find common violations:
-
-### Images
-```
-<img(?![^>]*alt=)
-<svg(?![^>]*aria-label)(?![^>]*role="presentation")
-<input\s[^>]*type="image"(?![^>]*alt=)
-<object(?![^>]*aria-label)(?![^>]*title=)
-```
-
-### Forms
-```
-<input(?![^>]*aria-label)(?![^>]*id=.*<label[^>]*for=)
-<select(?![^>]*aria-label)(?![^>]*id=)
-```
-
-### ARIA
-```
-role="(?!alert|button|checkbox|dialog|grid|img|link|list|listbox|menu|menubar|menuitem|navigation|option|progressbar|radio|region|search|slider|tab|tablist|tabpanel|textbox|timer|toolbar|tooltip|tree|treeitem)[a-z]+"
-aria-hidden=["']true["'][^>]*tabindex=(?!["']-1)
-```
-
-### Structure
-```
-<html(?![^>]*lang=)
-<title>\s*</title>
-```
-
-### Tables & frames
-```
-<table(?![^>]*role=["']presentation)(?![\s\S]*?<th)
-<th(?![^>]*scope=)
-<iframe(?![^>]*title=)
-```
-
-### Deprecated elements
-```
-<blink
-<marquee
-<meta[^>]*http-equiv=["']refresh
-autoplay(?![^>]*muted)
-```
+For regex detection patterns, see [references/PATTERNS.md](references/PATTERNS.md).
+For code examples (good/bad), see [references/EXAMPLES.md](references/EXAMPLES.md).
+For manual review checklist, see [references/CHECKLIST.md](references/CHECKLIST.md).
 
 ## Expected Output
+
+Adapt the output format to the scope of the audit (single component, page, or full project). For a full audit, use:
 
 ### Accessibility Score
 ```
@@ -132,12 +101,18 @@ For a complete runtime audit, use in addition:
 
 ## Directives
 
-- Audit all 11 categories systematically
-- Classify every issue by impact level
-- Distinguish violations (auto-detectable) from needs-review (manual)
-- Propose concrete fixes with code examples
+**CRITICAL**: Audit all 11 categories systematically — never skip a category.
+
+**CRITICAL**: Every issue must be classified by impact level (Critical/Serious/Moderate/Minor).
+
+**CRITICAL**: Distinguish violations (auto-detectable) from needs-review (manual verification). Load [references/CHECKLIST.md](references/CHECKLIST.md) for manual review items.
+
+**CRITICAL**: Propose concrete fixes with code examples for every violation. Load [references/EXAMPLES.md](references/EXAMPLES.md) for good/bad patterns.
+
+**CRITICAL**: Never ignore Critical violations — they block access for users with disabilities.
+
 - Never ignore decorative images (they must have `alt=""`)
-- Never skip Critical violations
 - Target WCAG 2.1/2.2 level AA minimum
+- Use [references/PATTERNS.md](references/PATTERNS.md) regex patterns for systematic detection
 
 Think carefully about the experience of users with disabilities.

@@ -8,6 +8,19 @@ An [Agent Skill](https://agentskills.io) for auditing web accessibility against 
 npx skills add christopherlouet/wcag-audit
 ```
 
+## Usage
+
+Ask your AI agent to audit accessibility:
+
+```
+> Audit the accessibility of my login page
+> Check WCAG compliance on src/components/
+> Review this form for accessibility issues
+> Are there any a11y violations in the navigation component?
+```
+
+The skill activates automatically when you mention accessibility, WCAG, a11y, screen readers, or ask to review UI components for compliance.
+
 ## What it does
 
 Scans your UI code (React, Vue, Angular, Svelte, HTML) for accessibility violations across **11 categories**:
@@ -35,6 +48,18 @@ The audit produces:
 - Violations table with impact, WCAG ref, file:line, and fix suggestion
 - Needs-review items requiring manual verification
 - Prioritized recommendations
+
+## Skill contents
+
+```
+wcag-audit/
+├── SKILL.md                   # Main skill instructions
+└── references/
+    ├── RULES.md               # 60+ rules across 11 categories
+    ├── PATTERNS.md            # Regex patterns for violation detection
+    ├── EXAMPLES.md            # Good/bad code examples per category
+    └── CHECKLIST.md           # Manual review checklist (needs-review items)
+```
 
 ## Complementary tools
 
