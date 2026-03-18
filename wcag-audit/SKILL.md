@@ -5,7 +5,7 @@ license: MIT
 compatibility: Works with any web project (HTML, React, Vue, Angular, Svelte). Read-only audit — no modifications.
 metadata:
   author: christopherlouet
-  version: "1.1"
+  version: "1.0.0"
   source: https://github.com/christopherlouet/wcag-audit
 ---
 
